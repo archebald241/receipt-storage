@@ -1,0 +1,33 @@
+.App{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.title h1{
+  padding-right: 50px;
+}
+.title-left, .title-right{
+  padding: 10px;
+}
+.title-right form{
+  display: flex;
+  justify-content: center;
+  height: 40px;
+}
+.title-right form p{
+  padding: 10px 10px 0 20px;
+  width: 260px;
+}
+th, td {
+  width: 200px;
+  text-align: center;
+}
+input{
+  width: 100%;
+}
