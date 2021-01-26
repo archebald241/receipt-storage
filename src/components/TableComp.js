@@ -1,4 +1,6 @@
 import React from 'react';
+import { Table, Button } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 export default class TableComp extends React.Component {
@@ -8,37 +10,49 @@ export default class TableComp extends React.Component {
 		this.state = {
 
 		};
+		this.delInTable = this.delInTable.bind(this);
 	}
+
+	delInTable(index){
+    this.props.delTableText(index)
+  }
+
 
 	render() {
 		return (
 			<div>
-				<table border="1">
-					<tr>
-						<th>№</th>
-						<th>Дата покупки</th>
-						<th>Киоск</th>
-						<th>Тип</th>
-						<th>Статус оплаты</th>
-						<th>Оплата</th>
-						<th>Сумма</th>
-						<th>Кол-во товара</th>
-						<th>Наименование товара</th>
-					</tr>
-					{this.props.mainTable.map((item, index) => (
-						<tr>
-							<td key={item.name}>{index}</td>
-							<td key={item.name}>{item.datePay}</td>
-							<td key={item.name}>{item.kioskName}</td>
-							<td key={item.name}>{item.payType}</td>
-							<td key={item.name}>{item.payStatus}</td>
-							<td key={item.name}>{item.sum}</td>
-							<td key={item.name}>{item.paySum}</td>
-							<td key={item.name}>{item.quantityPositions}</td>
-							<td key={item.name}>{item.namePosicions}</td>
-						</tr>
-					))}
-				</table>
+				<Table striped bordered hover>
+				  <thead>
+				    <tr>
+							<th>№</th>
+							<th>Дата покупки</th>
+							<th>Киоск</th>
+							<th>Тип</th>
+							<th>Статус оплаты</th>
+							<th>Оплата</th>
+							<th>Сумма</th>
+							<th>Кол-во товара</th>
+							<th>Наименование товара</th>
+							<th>Удалить чек</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+						{this.props.mainTable.map((item, index) => (
+							<tr>
+								<td key={item.name}>{index+1}</td>
+								<td key={item.name}>{item.datePay.replace('T',', ')}</td>
+								<td key={item.name}>{item.kioskName}</td>
+								<td key={item.name}>{item.chequeType}</td>
+								<td key={item.name}>{item.payStatus}</td>
+								<td key={item.name}>{item.paySum}</td>
+								<td key={item.name}>{item.sum}</td>
+								<td key={item.name}>{item.quantityPositions}</td>
+								<td key={item.name}>{item.namePosicions}</td>
+								<td key={item.name} className="delBut"><Button variant="primary" onClick={()=>{this.delInTable(index)}}>Удалить</Button></td>
+							</tr>
+						))}
+				  </tbody>
+				</Table>
 			</div>
 		);
 	}

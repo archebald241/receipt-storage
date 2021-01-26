@@ -3,13 +3,23 @@ import { DELETE_IN_TABLE } from "./actions.js";
 
 const defaultState = [
 	{
-		datePay : '2021-01-01',
+		datePay : '2021-01-01T10:00',
 		kioskName : 'Киоск № 11',
-		payType : 0,
-		payStatus : 0,
-		sum : 9000,
+		chequeType  : "Продажа",
+		payStatus : "Оплачено",
 		paySum : 9000,
+		sum : 9000,
 		quantityPositions : 2,
+		namePosicions : "Морс клюква из вологодской области"
+	},
+	{
+		datePay : '2020-02-26T18:24',
+		kioskName : 'Киоск № 11',
+		chequeType  : "Продажа",
+		payStatus : "Оплачено",
+		paySum : 4500,
+		sum : 4500,
+		quantityPositions : 1,
 		namePosicions : "Морс клюква из вологодской области"
 	}
 ]
@@ -19,7 +29,7 @@ export const addReducer = (state = defaultState, action) => {
 		case ADD_IN_TABLE:
 			return [ ...state, action.payload ]
 		case DELETE_IN_TABLE:
-			return [...state.slice(0, action.payload), ...state.slice(action.payload + 1)]
+			return state.filter((_,index) => index !== action.payload)
 		default:
 			return state;
 	}

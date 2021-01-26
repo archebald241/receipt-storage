@@ -17,15 +17,14 @@
 }
 .title-right form{
   display: flex;
-  justify-content: center;
-  height: 40px;
+    justify-content: center;
+    height: 40px;
 }
 .title-right form p{
   padding: 10px 10px 0 20px;
   width: 260px;
 }
 th, td {
-  width: 200px;
   text-align: center;
 }
 input{
