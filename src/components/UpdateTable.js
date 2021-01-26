@@ -11,7 +11,7 @@ export default class UpdateTable extends React.Component {
 			showError : false,
 			show : false,
 			datePay : '',
-			kioskName : '',
+			kioskName : 'Киоск № 11',
 			chequeType : 'Продажа',
 			paySum : 0,
 			sum : 0,
@@ -48,7 +48,7 @@ export default class UpdateTable extends React.Component {
 		}	else {
 			payStatus = 'Недоплата';
 		}
-		if (this.state.datePay != '' && this.state.kioskName != '' && this.state.namePosicions != '') {
+		if (this.state.datePay !== '' && this.state.namePosicions !== '') {
 			var line = {
 				datePay : this.state.datePay,
 				kioskName : this.state.kioskName,
@@ -62,7 +62,7 @@ export default class UpdateTable extends React.Component {
 			this.setState({
 				showError: false,
 				datePay : '',
-				kioskName : '',
+				kioskName : 'Киоск № 11',
 				chequeType : 'Продажа',
 				paySum : 0,
 				sum : 0,
@@ -90,7 +90,12 @@ export default class UpdateTable extends React.Component {
 							</Form.Group>
 							<Form.Group controlId="formBasicPassword">
 								<Form.Label>Киоск</Form.Label>
-								<Form.Control type="text" name="kioskName" onChange={this.addInTable} value={this.state.kioskName} autocomplete="off" />
+								<Form.Control as="select" type="text" name="kioskName" onChange={this.addInTable} value={this.state.kioskName} autocomplete="off">
+									<option>Киоск № 11</option>
+						      <option>Киоск № 10</option>
+									<option>Киоск № 9</option>
+									<option>Киоск № 8</option>
+								</Form.Control>
 							</Form.Group>
 							<Form.Group controlId="formBasicPassword">
 								<Form.Label>Тип</Form.Label>
