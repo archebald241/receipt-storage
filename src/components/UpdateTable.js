@@ -11,10 +11,10 @@ export default class UpdateTable extends React.Component {
 			show : false,
 			datePay : '',
 			kioskName : '',
-			chequeType : '',
+			chequeType : 'Продажа',
 			paySum : 0,
 			sum : 0,
-			quantityPositions : 0,
+			quantityPositions : 1,
 			namePosicions : ''
 		};
 
@@ -89,7 +89,10 @@ export default class UpdateTable extends React.Component {
 								</Form.Group>
 								<Form.Group controlId="formBasicPassword">
 									<Form.Label>Тип</Form.Label>
-									<Form.Control type="text" name="chequeType" onChange={this.addInTable} value={this.state.chequeType} autocomplete="off" />
+									<Form.Control as="select" type="text" name="chequeType" onChange={this.addInTable} value={this.state.chequeType} autocomplete="off">
+										<option>Продажа</option>
+							      <option>Возврат</option>
+									</Form.Control>
 								</Form.Group>
 								<Form.Group controlId="formBasicPassword">
 									<Form.Label>Оплата</Form.Label>
@@ -100,8 +103,8 @@ export default class UpdateTable extends React.Component {
 									<Form.Control type="number" min="0" name="sum" onChange={this.addInTable} value={this.state.sum} autocomplete="off" />
 								</Form.Group>
 								<Form.Group controlId="formBasicPassword">
-									<Form.Label>Кол-во товара</Form.Label>
-									<Form.Control type="number" min="0" name="quantityPositions" onChange={this.addInTable} value={this.state.quantityPositions} autocomplete="off" />
+									<Form.Label>Количествово товара</Form.Label>
+									<Form.Control type="number" min="1" name="quantityPositions" onChange={this.addInTable} value={this.state.quantityPositions} autocomplete="off" />
 								</Form.Group>
 								<Form.Group controlId="formBasicPassword">
 									<Form.Label>Наименование товара</Form.Label>
