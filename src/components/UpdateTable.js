@@ -12,7 +12,7 @@ export default class UpdateTable extends React.Component {
 			show : false,
 			datePay : '',
 			kioskName : 'Киоск № 11',
-			chequeType : 'Продажа',
+			chequeType : "Продажа",
 			paySum : 0,
 			sum : 0,
 			quantityPositions : 1,
@@ -48,11 +48,14 @@ export default class UpdateTable extends React.Component {
 		}	else {
 			payStatus = 'Недоплата';
 		}
+
+		let chequeType = (this.state.chequeType === "Продажа") ? 0 : 1;
+
 		if (this.state.datePay !== '' && this.state.namePosicions !== '') {
 			var line = {
 				datePay : this.state.datePay,
 				kioskName : this.state.kioskName,
-				chequeType  : this.state.chequeType,
+				chequeType  : chequeType,
 				payStatus : payStatus,
 				paySum : this.state.paySum,
 				sum : this.state.sum,
@@ -63,7 +66,7 @@ export default class UpdateTable extends React.Component {
 				showError: false,
 				datePay : '',
 				kioskName : 'Киоск № 11',
-				chequeType : 'Продажа',
+				chequeType : "Продажа",
 				paySum : 0,
 				sum : 0,
 				quantityPositions : 0,

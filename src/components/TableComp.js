@@ -17,7 +17,6 @@ export default class TableComp extends React.Component {
     this.props.delTableText(index)
   }
 
-
 	render() {
 		return (
 			<div>
@@ -42,7 +41,8 @@ export default class TableComp extends React.Component {
 								<td key={item.name}>{index+1}</td>
 								<td key={item.name}>{item.datePay.replace('T',', ')}</td>
 								<td key={item.name}>{item.kioskName}</td>
-								<td key={item.name}>{item.chequeType}</td>
+								{item.chequeType===1 && <td key={item.name}>Возврат</td>}
+								{item.chequeType===0 && <td key={item.name}>Продажа</td>}
 								<td key={item.name}>{item.payStatus}</td>
 								<td key={item.name}>{item.paySum}</td>
 								<td key={item.name}>{item.sum}</td>

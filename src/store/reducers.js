@@ -5,7 +5,7 @@ const defaultState = [
 	{
 		datePay : '2021-01-01T10:00',
 		kioskName : 'Киоск № 11',
-		chequeType  : "Продажа",
+		chequeType  : 0,
 		payStatus : "Оплачено",
 		paySum : 9000,
 		sum : 9000,
@@ -15,7 +15,7 @@ const defaultState = [
 	{
 		datePay : '2020-02-26T18:24',
 		kioskName : 'Киоск № 11',
-		chequeType  : "Продажа",
+		chequeType  : 0,
 		payStatus : "Оплачено",
 		paySum : 4500,
 		sum : 4500,
