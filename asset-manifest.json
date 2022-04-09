@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/receipt-storage/static/css/main.7313aa19.chunk.css",
+    "main.js": "/receipt-storage/static/js/main.ffd7ccd9.chunk.js",
+    "main.js.map": "/receipt-storage/static/js/main.ffd7ccd9.chunk.js.map",
+    "runtime-main.js": "/receipt-storage/static/js/runtime-main.5d5b4e3a.js",
+    "runtime-main.js.map": "/receipt-storage/static/js/runtime-main.5d5b4e3a.js.map",
+    "static/css/2.150d169a.chunk.css": "/receipt-storage/static/css/2.150d169a.chunk.css",
+    "static/js/2.bcc0afb3.chunk.js": "/receipt-storage/static/js/2.bcc0afb3.chunk.js",
+    "static/js/2.bcc0afb3.chunk.js.map": "/receipt-storage/static/js/2.bcc0afb3.chunk.js.map",
+    "static/js/3.1aa308ed.chunk.js": "/receipt-storage/static/js/3.1aa308ed.chunk.js",
+    "static/js/3.1aa308ed.chunk.js.map": "/receipt-storage/static/js/3.1aa308ed.chunk.js.map",
+    "index.html": "/receipt-storage/index.html",
+    "static/css/2.150d169a.chunk.css.map": "/receipt-storage/static/css/2.150d169a.chunk.css.map",
+    "static/css/main.7313aa19.chunk.css.map": "/receipt-storage/static/css/main.7313aa19.chunk.css.map",
+    "static/js/2.bcc0afb3.chunk.js.LICENSE.txt": "/receipt-storage/static/js/2.bcc0afb3.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5d5b4e3a.js",
+    "static/css/2.150d169a.chunk.css",
+    "static/js/2.bcc0afb3.chunk.js",
+    "static/css/main.7313aa19.chunk.css",
+    "static/js/main.ffd7ccd9.chunk.js"
+  ]
+}
